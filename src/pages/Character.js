@@ -21,7 +21,7 @@ const Character = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   return isLoading ? (
     <Loader />
