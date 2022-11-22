@@ -16,7 +16,7 @@ const Comics = ({ search }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const myUrlWithParams = new URL("http://localhost:4000/comics");
+        const myUrlWithParams = new URL("https://site--marvel-back--pp6f8wcmdd76.code.run/comics");
         search && myUrlWithParams.searchParams.append("title", search);
         const response = await axios.get(myUrlWithParams.href);
         setData(response.data);
