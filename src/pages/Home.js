@@ -19,7 +19,7 @@ const Home = ({ search }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const myUrlWithParams = new URL("http://localhost:4000/Home");
+        const myUrlWithParams = new URL("https://site--marvel-back--pp6f8wcmdd76.code.run/Home");
         search && myUrlWithParams.searchParams.append("name", search);
         const response = await axios.get(myUrlWithParams.href);
         setData(response.data);
