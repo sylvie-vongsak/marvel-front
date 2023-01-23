@@ -1,38 +1,380 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+/* --------- Loader ------------- */
+.lds-dual-ring-container {
+  margin: auto;
+  display: flex;
+  margin-top: 40px;
+}
+
+.lds-dual-ring {
+  margin: auto;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid red;
+  border-color: red transparent red transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------- Headers ------------ */
+.Logo {
+  width: 100%;
+  height: 310px;
+}
+
+.marvel-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: inherit;
+}
+
+.header-link {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  width: auto;
+  height: 60px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.link-home {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.link-comics {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.link-favorites {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.search-bar {
+  width: 500px;
+  height: 40px;
+  border-radius: 40px;
+  color: black;
+  background-color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* --------- Characters ------------ */
+.Characters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #F0E7CB;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  width: 250px;
+  height: 350px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: underline black;
+  box-sizing: border-box;
+  transition: scale 200ms;
+}
+
+.card:hover {
+  scale: 1.05;
+  box-shadow: 1px 5px 14px rgba(0, 0, 0, 3);
+
+}
+
+.card-character {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+.card-character-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  object-position: 0 0;
+}
+
+.card-character-name-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 15px;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  position: absolute;
+  top: 190px;
+  /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+  border-bottom: 1px solid white;
+}
+
+.card-character-description {
+  margin-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  font-size: 13px;
+  height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+
+}
+
+/* --------- Comics ------------ */
+
+.comics {
+  width: 250px;
+  height: 400px;
+  background-color: #F0E7CB;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.comics-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.comics-title {
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* --------- Character ------------ */
+
+.Character-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #F0E7CB;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.Character-info {
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+  border-radius: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Characters-text {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Characters-img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.Characters-name {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.Characters-description {
+  font-size: 18px;
+}
+
+.Characters-comics {
+  width: 1700px;
+  gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin: auto;
+  padding: 20px;
+  color: black;
+}
+
+.Characters-comics-infos {
+  height: 370px;
+  width: 170px;
+
+
+}
+
+.Characters-comics-img {
+  width: 150px;
+}
+
+.Characters-comics-title {
+  width: 160px;
+  text-align: center;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+
+/* --------- Favoris ------------ */
+
+.fav-characters-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F0E7CB;
+  font-family: 'Poppins', sans-serif;
+}
+
+.charact-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.fav {
+  display: flex;
+  justify-Content: center;
+  align-items: center;
+  border-radius: px;
+  background-Color: #ED1D24;
+  width: 300px;
+  height: 50px;
+  text-Align: center;
+  margin-Top: 80px;
+  margin-bottom: 40px;
+}
+
+.text-fav-charact {
+  color: white;
+  font-Weight: bold;
+  font-Size: 20px;
+}
+
+.fav-contain {
+  display: flex;
+  flex-Direction: row;
+  gap: 70px;
+}
+
+.text-fav {
+  display: flex;
+  flex-Direction: column;
+  align-Items: center;
+  color: white;
+  font-size: 20px;
+}
+
+.description-fav-character {
+  font-family: 'Poppins', sans-serif;
+  font-Weight: bold;
+}
+
+.img-fav-character {
+  width: 200px;
+  height: 200px;
+  border-Radius: 50%;
+  box-Shadow: 5px 5px 5px -5px #000000;
+  object-fit: cover;
+}
+
+.resultat-fav {
+  font-family: 'Poppins', sans-serif;
+  font-Weight: bold;
+}
+
+/* ----------------------- */
+
+.fav-comics-container {
+  display: flex;
+  flex-Direction: column;
+  align-Items: center;
+  padding-Bottom: 300px;
+}
+
+.img-fav-comics {
+  width: 200px;
+  border-radius: 2%;
+  box-Shadow: 5px 5px 5px -5px #000000;
+}
+
+.fav-comics {
+  display: flex;
+  flex-Direction: column;
+  align-Items: center;
+}
+
+.description-fav {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  width: 180px;
+  text-align: center;
+}
+
+
+/* --------- Boutton Favoris ------------ */
+.ButtonFav {
+  background-color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px -5px #000000;
 }
