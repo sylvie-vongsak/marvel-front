@@ -17,6 +17,3 @@ https://vivii-marvel.netlify.app/
 ## API MARVEL
 
  by LeReacteur : https://lereacteur-marvel-api.netlify.app/
-
-
-## Demo
